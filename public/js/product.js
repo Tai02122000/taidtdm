@@ -2,6 +2,7 @@
 
 let previewContainer = document.querySelector(".products-preview");
 let previewBox = previewContainer.querySelectorAll(".preview");
+let header = previewContainer.querySelector("header");
 
 document.querySelectorAll(".products-container .product").forEach((product) => {
   product.onclick = () => {
@@ -11,6 +12,7 @@ document.querySelectorAll(".products-container .product").forEach((product) => {
       let target = preview.getAttribute("data-target");
       if (name == target) {
         preview.classList.add("active");
+        header.classList.add("header-zindex-1");
       }
     });
   };
