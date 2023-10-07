@@ -1,0 +1,36 @@
+.manage-product {
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    button {
+      width: 160px;
+      height: 40px;
+      border: none;
+      align-items: center;
+    }
+  }
+
+  #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    tr {
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04aa6d;
+        color: white;
+      }
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+}

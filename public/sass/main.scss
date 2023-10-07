@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #fafafa;
+  min-height: 100vh;
+
+  // overflow: hidden;
+  font-size: 100%;
+}
+.container {
+  width: 100%;
+  max-width: 1920px;
+  // padding: 0 8%;
+  margin: 0 auto;
+}
+// .heading {
+//   text-align: center;
+//   padding-top: 10%;
+//   margin-bottom: 60px;
+//   font-weight: 600;
+//   position: relative;
+//   padding-bottom: 2px;
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     width: 40px;
+//     height: 2px;
+//     background-color: blue;
+
+//     bottom: 0;
+//   }
+// }
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 62%;
+  }
+}
+$color-white: #ffffff;
+@import "header", "carousel", "card", "banner", "service", "productcard",
+  "table", "footer", "inputproduct";

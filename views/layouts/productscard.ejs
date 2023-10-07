@@ -1,0 +1,36 @@
+<section class="productscard">
+  <h3 class="title">organic products</h3>
+  <div class="products-container">
+    <% if(food != null) { %> <% food.forEach(function(article, index) { %>
+       <div class="product" data-name="p-<%- index %>">
+        <img src="<%- article.image %>" alt="" />
+        <h3><%- article.name %></h3>
+        <div class="price"><%- article.price %></div>
+      </div>
+      <% }) %> <% } else { %> No posts found. <% } %>
+   
+    <div class="products-preview">
+      <% if(food != null) { %> <% food.forEach(function(article, index) { %>
+        <div class="preview" data-target="p-<%- index %>">
+          <ion-icon name="close-outline" class="close"></ion-icon>
+          <img src="<%- article.image %>" alt="" />
+          <h3><%- article.name %></h3>
+          <div class="strat">
+            <ion-icon name="star-outline"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+            <ion-icon name="star-half-outline"></ion-icon>
+            <span>( 250 )</span>
+          </div>
+          
+          <div class="price"><%- article.price %>$</div>
+          <div class="buttons">
+            <a href="#" class="buy">Buy Now</a>
+            <a href="#" class="card">Add to card</a>
+          </div>
+        </div>
+       <% }) %> <% } else { %> No posts found. <% } %>
+    
+    </div>
+</section>

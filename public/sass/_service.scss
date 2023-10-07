@@ -1,0 +1,48 @@
+.service {
+  margin: 50px 0;
+  padding: 100px 0 50px;
+  h1 {
+    text-align: center;
+    font-weight: 600px;
+    position: relative;
+    &::after {
+      content: "";
+      background: #303ef7;
+      width: 100px;
+      height: 5px;
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-gap: 30px;
+    .service {
+      text-align: center;
+      padding: 25px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      background: transparent;
+      transition: transform 0.5s;
+      ion-icon {
+        font-size: 40px;
+        margin-bottom: 10px;
+        color: #303ef7;
+      }
+      h2 {
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      &:hover {
+        background: #303ef7;
+        color: #ffff;
+        transform: scale(1.05);
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<div class="manage-product">
+  <div class="heading">
+    <h1>A Fancy Table</h1>
+    <a href="/manage/inputproduct"><button>them</button></a>
+  </div>
+
+  <table id="customers">
+    <thead>
+      <tr>
+        <th>Ten san pham</th>
+        <th>Gia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if(food != null) { %> <% food.forEach(function(article, index) { %>
+
+      <tr>
+        <td><%- article.name %></td>
+        <td><%- article.price %></td>
+      </tr>
+      <% }) %> <% } else { %> No posts found. <% } %>
+    </tbody>
+  </table>
+</div>
