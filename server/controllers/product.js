@@ -14,7 +14,7 @@ router.post("/", upload.any(), async (req, res) => {
     image:
       req.protocol +
       "://" +
-      +req.get("host") +
+      req.get("host") +
       "/file/" +
       req.files?.[0].filename,
   };
