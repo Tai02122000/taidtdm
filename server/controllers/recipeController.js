@@ -6,7 +6,7 @@ const { default: axios } = require("axios");
  */
 const homepage = async (req, res) => {
   try {
-    const newsAPI = await axios.get(`/api/product/6`);
+    const newsAPI = await axios.get(`${req.get("origin")}/api/product/6`);
     res.render("index", { food: newsAPI.data });
   } catch (err) {
     res.render("index", { food: null });
@@ -16,10 +16,12 @@ const productsPage = async (req, res) => {
   try {
     const { search } = req.params;
     if (search) {
-      const result = await axios.get(`/api/product/search/${search}`);
+      const result = await axios.get(
+        `${req.get("origin")}/api/product/search/${search}`
+      );
       res.render("products/index", { food: result.data });
     } else {
-      const result = await axios.get(`/api/product`);
+      const result = await axios.get(`${req.get("origin")}/api/product`);
       res.render("products/index", { food: result.data });
     }
   } catch (err) {
@@ -28,7 +30,7 @@ const productsPage = async (req, res) => {
 };
 const addproducts = async (req, res) => {
   try {
-    const newsAPI = await axios.get(`/api/product`);
+    const newsAPI = await axios.get(`${req.get("origin")}/api/product`);
     res.render("manage/product", { food: newsAPI.data });
   } catch (err) {
     res.render("manage/product", { food: null });
