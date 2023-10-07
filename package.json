@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sasstocss": "node-sass public/sass/main.scss public/css/style.css",
-    "dev": "node app.js",
-    "start": "node -e scss -x \"npm run sasstocss && npm run dev\""
+    "dev": "node -e scss -x \"npm run sasstocss && npm run dev\"",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
