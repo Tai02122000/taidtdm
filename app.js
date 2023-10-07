@@ -10,7 +10,9 @@ const app = express();
 const port = process.env.PORT || 8080;
 const mongooose = require("mongoose");
 mongooose
-  .connect(process.env.MONGO_URL)
+  .connect(
+    "mongodb+srv://vantaik20:tainek123@cluster0.drnwdlr.mongodb.net/cookingblog"
+  )
   .then(() => console.log("DBconection Successfull!"))
   .catch((err) => {
     console.log(err);
