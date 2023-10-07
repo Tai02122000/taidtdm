@@ -6,6 +6,7 @@ const { default: axios } = require("axios");
  */
 const homepage = async (req, res) => {
   console.log(req.headers.origin);
+  console.log(req.get("host"));
   try {
     const newsAPI = await axios.get(`${req.get("origin")}/api/product/6`);
     res.render("index", { food: newsAPI.data });
