@@ -12,7 +12,7 @@ router.post("/", upload.any(), async (req, res) => {
     vegetarian,
     price,
     image:
-      req.product +
+      req.protocol +
       "://" +
       +req.get("host") +
       "/file/" +
