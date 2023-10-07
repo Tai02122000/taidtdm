@@ -4,7 +4,7 @@ form.addEventListener("submit", (e) => {
   const fd = new FormData(form);
   const urlencoded = new URLSearchParams(fd).toString();
 
-  fetch("http://localhost:3001/api/product", {
+  fetch("/api/product", {
     method: "POST",
     body: fd,
   });
