@@ -11,7 +11,7 @@ router.post("/", upload.any(), async (req, res) => {
     spicy,
     vegetarian,
     price,
-    image: req.get("origin") + "/file/" + req.files?.[0].filename,
+    image: req.get("host") + "/file/" + req.files?.[0].filename,
   };
 
   const newFood = new Food(parameters);
