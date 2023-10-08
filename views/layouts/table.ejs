@@ -1,25 +1,34 @@
-<div class="manage-product">
-  <div class="heading">
-    <h1>Product Details</h1>
-    <input placeholder="product" />
-    <a href="/manage/inputproduct" class="add-new"><button>Add New</button></a>
+<div class="container">
+  <div class="manage-product">
+    <div class="heading">
+      <h1>Product Details</h1>
+      <a href="/manage/inputproduct" class="add-new">Add New</a>
+    </div>
+
+    <table id="customers">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name product</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if(food != null) { %> <% food.forEach(function(article, index) { %>
+
+        <tr>
+          <td>
+            <img
+              style="width: 80px; height: 80px"
+              src="<%- article.image %>"
+              alt=""
+            />
+          </td>
+          <td><%- article.name %></td>
+          <td><%- article.price %></td>
+        </tr>
+        <% }) %> <% } else { %> No posts found. <% } %>
+      </tbody>
+    </table>
   </div>
-
-  <table id="customers">
-    <thead>
-      <tr>
-        <th>Name product</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% if(food != null) { %> <% food.forEach(function(article, index) { %>
-
-      <tr>
-        <td><%- article.name %></td>
-        <td><%- article.price %></td>
-      </tr>
-      <% }) %> <% } else { %> No posts found. <% } %>
-    </tbody>
-  </table>
 </div>

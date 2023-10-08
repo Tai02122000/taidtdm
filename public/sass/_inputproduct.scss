@@ -8,6 +8,13 @@
       justify-content: center;
       font-size: 35px;
     }
+    label {
+      font-size: 15px;
+      font-weight: 500;
+      &::after {
+        content: ":";
+      }
+    }
     input {
       &[type="text"],
       select {
@@ -31,6 +38,9 @@
         &:hover {
           background-color: #45a049;
         }
+      }
+      &::placeholder {
+        text-transform: capitalize;
       }
     }
   }

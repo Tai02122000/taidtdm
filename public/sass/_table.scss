@@ -1,13 +1,15 @@
 .manage-product {
   width: 100%;
+  background-color: #fff;
+  padding: 50px 0 0;
   .heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: rgb(240, 240, 240);
     h1 {
       color: #000000;
+      text-transform: uppercase;
     }
     input {
       padding: 10px 20px;
@@ -18,17 +20,21 @@
       color: #0298fc;
       &::placeholder {
         color: #0298fc;
+        text-transform: uppercase;
       }
     }
     .add-new {
       padding: 10px 20px;
       color: #ffffff;
       background-color: #0298fc;
-      button {
-        outline: none;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
+      border: 1px solid #0298fc;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        background-color: transparent;
+        border-color: #0298fc;
+        color: #0298fc;
       }
     }
   }
