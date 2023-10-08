@@ -1,12 +1,35 @@
 .manage-product {
+  width: 100%;
   .heading {
     display: flex;
     justify-content: space-between;
-    button {
-      width: 160px;
-      height: 40px;
-      border: none;
-      align-items: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+    h1 {
+      color: #000000;
+    }
+    input {
+      padding: 10px 20px;
+      margin: 0 10px;
+      outline: none;
+      border: 1px solid #0298fc;
+      border-radius: 6px;
+      color: #0298fc;
+      &::placeholder {
+        color: #0298fc;
+      }
+    }
+    .add-new {
+      padding: 10px 20px;
+      color: #ffffff;
+      background-color: #0298fc;
+      button {
+        outline: none;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
     }
   }
 
