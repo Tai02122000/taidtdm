@@ -9,5 +9,5 @@ router.get("/", recipeController.homepage);
 router.get("/products", recipeController.productsPage);
 router.get("/products/:search", recipeController.productsPage);
 router.get("/manage/product", recipeController.addproducts);
-router.get("/manage/inputproduct", recipeController.inputproducts);
+router.get("/manage/add-products", recipeController.inputproducts);
 module.exports = router;
